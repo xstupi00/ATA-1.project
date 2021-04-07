@@ -4,7 +4,6 @@
 
 - the [directory](./ceg_testos) contains a generated [graph](./ceg_testos/graph.svg), a decision [table](./ceg_testos/test_cases.csv) with generated test cases, and a [report](./ceg_testos/report.md) of settings and results.
 
-![CEG Graph](./ceg_testos/graph.svg)
 <img src="./ceg_testos/graph.svg">
 
 |Causes && Effects  |Description                                                     |[1]  |[2]  |[3]  |[4]  |[5]  |[6]  |[7]  |[8]  |[9]  |[10] |[11] |[12] |[13] |[14] |
