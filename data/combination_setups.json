@@ -1,0 +1,136 @@
+[
+  {
+    "cargo_setups": [
+      ["C", "B", 100, "Cargo_CB_100", 10],
+      ["C", "A", 150, "Cargo_CA_150", 15],
+      ["D", "A", 75, "Cargo_DA_75", 40],
+      ["A", "D", 100, "Cargo_AD_100", 100],
+      ["A", "B", 50, "Cargo_AB_50", 140],
+      ["D", "A", 100, "Cargo_DA_100", 150],
+      ["A", "B", 150, "Cargo_AB_150", 60]
+    ],
+    "cart_slots": 1,
+    "cart_capacity": 500
+  },
+  {
+    "cargo_setups": [
+      ["B", "C", 30, "Cargo_BC_30", 10],
+      ["A", "D", 50, "Cargo_AD_50", 15],
+      ["B", "A", 50, "Cargo_BA_50_tmp", 22],
+      ["A", "C", 20, "Cargo_AC_20", 25],
+      ["B", "D", 40, "Cargo_BD_40", 20]
+    ],
+    "cart_slots": 2,
+    "cart_capacity": 150
+  },
+  {
+    "cargo_setups": [
+      ["A", "B", 10, "Cargo_AB_10", 10],
+      ["B", "D", 20, "Cargo_BD_20", 50],
+      ["D", "C", 5, "Cargo_DC_5", 75],
+      ["A", "D", 10, "Cargo_AD_10", 100]
+    ],
+    "cart_slots": 3,
+    "cart_capacity": 50
+  },
+  {
+    "cargo_setups": [
+      ["C", "A", 20, "Cargo_CA_20", 6],
+      ["A", "D", 10, "Cargo_AD_10", 7],
+      ["D", "A", 15, "Cargo_DA_15", 5]
+    ],
+    "cart_slots": 2,
+    "cart_capacity": 50
+  },
+  {
+    "cargo_setups": [
+      ["C", "A", 10, "Cargo_CA_10", 10],
+      ["B", "A", 5, "Cargo_BA_5_tmp", 52],
+      ["A", "B", 10, "Cargo_AB_10", 100],
+      ["B", "D", 20, "Cargo_BD_20", 50]
+    ],
+    "cart_slots": 4,
+    "cart_capacity": 50
+  },
+  {
+    "cargo_setups": [
+      ["A", "C", 100, "Cargo_AC_100", 10],
+      ["B", "A", 50, "Cargo_BA_50", 15],
+      ["A", "D", 75, "Cargo_AD_75", 20]
+    ],
+    "cart_slots": 4,
+    "cart_capacity": 150
+  },
+  {
+    "cargo_setups": [
+      ["A", "C", 200, "Cargo_AC_200", 40],
+      ["B", "A", 100, "Cargo_BA_100_tmp", 12],
+      ["B", "D", 300, "Cargo_BD_300", 10]
+    ],
+    "cart_slots": 2,
+    "cart_capacity": 500
+  },
+  {
+    "cargo_setups": [
+      ["D", "B", 500, "Cargo_DB_500", 10]
+    ],
+    "cart_slots": 1,
+    "cart_capacity": 500
+  },
+  {
+    "cargo_setups": [
+      ["A", "B", 120, "Cargo_AB_120", 10]
+    ],
+    "cart_slots": 2,
+    "cart_capacity": 150
+  },
+  {
+    "cargo_setups": [
+      ["C", "D", 450, "Cargo_CD_450", 5]
+    ],
+    "cart_slots": 2,
+    "cart_capacity": 500
+  },
+  {
+    "cargo_setups": [
+      ["C", "A", 100, "Cargo_CA_100", 2]
+    ],
+    "cart_slots": 3,
+    "cart_capacity": 150
+  },
+  {
+    "cargo_setups": [
+      ["D", "A", 150, "Cargo_DA_150", 40]
+    ],
+    "cart_slots": 4,
+    "cart_capacity": 150
+  },
+   {
+    "cargo_setups": [
+      ["D", "A", 200, "Cargo_DA_overweight", 5]
+    ],
+    "cart_slots": 1,
+    "cart_capacity": 150
+  },
+  {
+    "cargo_setups": [
+      ["B", "A", 100, "Cargo_BA_overweight", 5]
+    ],
+    "cart_slots": 2,
+    "cart_capacity": 50
+  },
+  {
+    "cargo_setups": [
+      ["D", "A", 100, "Cargo_DA_overweight", 10]
+    ],
+    "cart_slots": 3,
+    "cart_capacity": 50
+  },
+  {
+    "cargo_setups": [
+      ["B", "D", 200, "Cargo_BD_overweight", 2]
+    ],
+    "cart_slots": 3,
+    "cart_capacity": 150
+  }
+]

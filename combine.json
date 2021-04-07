@@ -1,0 +1,89 @@
+{
+  "name": "Cart Controller",
+  "t_strength": "2",
+  "dont_care_values": "no",
+  "values": "indices",
+  "parameters": [
+    {
+      "identificator": "transport_time",
+      "type": "integer",
+      "blocks": [
+        "transport_time > 0 and transport_time <= 10",
+        "transport_time > 10 and transport_time <= 20",
+        "transport_time > 20 and transport_time <= 30",
+        "transport_time > 30 and transport_time <= 40",
+        "transport_time > 40 and transport_time <= 50",
+        "transport_time > 50 and transport_time <= 60",
+        "transport_time > 60"
+      ]
+    },
+    {
+      "identificator": "src",
+      "type": "string",
+      "blocks": [
+        "src = 'A'",
+        "src = 'B'",
+        "src = 'C'",
+        "src = 'D'"
+      ]
+    },
+    {
+      "identificator": "dst",
+      "type": "string",
+      "blocks": [
+        "dst = 'A'",
+        "dst = 'B'",
+        "dst = 'C'",
+        "dst = 'D'"
+      ]
+    },
+    {
+      "identificator": "total_weight",
+      "type": "integer",
+      "blocks": [
+        "total_weight > 0 and total_weight <= 50",
+        "total_weight > 50 and total_weight <= 150",
+        "total_weight > 150 and total_weight <= 500",
+        "total_weight > 500"
+      ]
+    },
+    {
+      "identificator": "slots",
+      "type": "integer",
+      "blocks": [
+        "slots = 1",
+        "slots = 2",
+        "slots = 3",
+        "slots = 4"
+      ]
+    },
+    {
+      "identificator": "capacity",
+      "type": "integer",
+      "blocks": [
+        "capacity = 50",
+        "capacity = 150",
+        "capacity = 500"
+      ]
+    }
+  ],
+  "constraints": [
+    "capacity.1 -> !slots.1",
+    "capacity.3 -> (slots.1 or slots.2)",
+    "capacity.1 -> (total_weight.1 or total_weight.2)",
+    "capacity.2 -> (total_weight.2 or total_weight.3)",
+    "capacity.3 -> (total_weight.3 or total_weight.4)",
+    "src.1 -> !dst.1",
+    "src.2 -> !dst.2",
+    "src.3 -> !dst.3",
+    "src.4 -> !dst.4",
+    "(src.4 and dst.1) -> transport_time.1 ",
+    "((src.1 and dst.2) or (src.2 and dst.3) or (src.3 and dst.4)) -> transport_time.2 ",
+    "((src.3 and dst.1) or (src.4 and dst.2)) -> transport_time.3 ",
+    "(src.1 and dst.3) -> transport_time.4 ",
+    "((src.3 and dst.2) or (src.2 and dst.1) or (src.4 and dst.3)) -> transport_time.5 ",
+    "(src.1 and dst.4) -> transport_time.6 ",
+    "(src.2 and dst.4) -> (transport_time.4 or transport_time.7)",
+    "(src.2 and dst.1) -> (transport_time.3 or transport_time.5)"
+  ]
+}

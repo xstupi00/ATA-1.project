@@ -1,0 +1,63 @@
+{
+  "name": "SUT name",
+  "t_strength": "2",
+  "dont_care_values": "yes",
+  "values": "indices",
+  "parameters": [
+    {
+      "identificator": "src",
+      "type": "string",
+      "blocks": [
+        "src = 'A'",
+        "src = 'B'",
+        "src = 'C'",
+        "src = 'D'"
+      ]
+    },
+    {
+      "identificator": "dst",
+      "type": "string",
+      "blocks": [
+        "dst = 'A'",
+        "dst = 'B'",
+        "dst = 'C'",
+        "dst = 'D'"
+      ]
+    },
+    {
+      "identificator": "time_to_load",
+      "type": "integer",
+      "blocks": [
+        "time_to_load > 0  and time_to_load <= 60",
+        "time_to_load > 60 and time_to_load <= 120",
+        "time_to_load > 120"
+      ]
+    },
+    {
+      "identificator": "time_to_station",
+      "type": "integer",
+      "blocks": [
+        "time_to_station > 0 and time_to_station <= 60",
+        "time_to_station > 0 and time_to_station <= 120",
+        "time_to_station > 120"
+      ]
+    },
+    {
+      "identificator": "can_load",
+      "type": "boolean",
+      "blocks": [
+        false,
+        true
+      ]
+    }
+  ],
+  "constraints": [
+    "time_to_load.1 -> (time_to_station.1 and can_load.1)",
+    "time_to_load.2 -> ((time_to_station.1 and can_load.2) or (time_to_station.2 and can_load.1))",
+    "time_to_load.3 -> ((time_to_station.1 and  can_load.2) or (time_to_station.2 and can_load.2) or (time_to_station.3))",
+    "src.1 -> !dst.1",
+    "src.2 -> !dst.2",
+    "src.3 -> !dst.3",
+    "src.4 -> !dst.4"
+  ]
+}
