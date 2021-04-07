@@ -2,7 +2,7 @@
 
 ## Cause-Effect Graph
 
-![text](Project_name.svg)
+![CEG Graph](./graph.svg)
 
 ### Causes:
 
