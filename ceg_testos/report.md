@@ -47,6 +47,8 @@ unload_cargo = load_in_minute || load_out_minute || has_cargo
 
 ```
 E: load_in_minute, load_out_minute, has_priority_cargo
+I: has_free_capacity, has_cargo
+I: has_free_slots, has_cargo
 load_in_minute->cargo_request
 load_out_minute->cargo_request
 load_in_minute->has_free_slots
@@ -118,94 +120,22 @@ unload_cargo: true
 ### [4]
 
 ```
-cargo_request: 0
+cargo_request: 1
 load_in_minute: 0
 load_out_minute: 0
 has_priority_cargo: 0
 has_free_slots: 1
-has_free_capacity: 0
+has_free_capacity: 1
 has_cargo: 0
 load_cargo: false
 load_priority_cargo: false
-becomes_priority: false
-expired_time: false
+becomes_priority: true
+expired_time: true
 only_unload: false
 load_and_unload: true
 unload_cargo: false
 ```
 ### [5]
-
-```
-cargo_request: 1
-load_in_minute: 0
-load_out_minute: 0
-has_priority_cargo: 0
-has_free_slots: 1
-has_free_capacity: 0
-has_cargo: 0
-load_cargo: false
-load_priority_cargo: false
-becomes_priority: true
-expired_time: true
-only_unload: false
-load_and_unload: true
-unload_cargo: false
-```
-### [6]
-
-```
-cargo_request: 0
-load_in_minute: 0
-load_out_minute: 0
-has_priority_cargo: 0
-has_free_slots: 0
-has_free_capacity: 0
-has_cargo: 0
-load_cargo: false
-load_priority_cargo: false
-becomes_priority: false
-expired_time: false
-only_unload: false
-load_and_unload: true
-unload_cargo: false
-```
-### [7]
-
-```
-cargo_request: 1
-load_in_minute: 0
-load_out_minute: 0
-has_priority_cargo: 0
-has_free_slots: 0
-has_free_capacity: 0
-has_cargo: 0
-load_cargo: false
-load_priority_cargo: false
-becomes_priority: true
-expired_time: true
-only_unload: false
-load_and_unload: true
-unload_cargo: false
-```
-### [8]
-
-```
-cargo_request: 0
-load_in_minute: 0
-load_out_minute: 0
-has_priority_cargo: 0
-has_free_slots: 0
-has_free_capacity: 1
-has_cargo: 0
-load_cargo: false
-load_priority_cargo: false
-becomes_priority: false
-expired_time: false
-only_unload: false
-load_and_unload: true
-unload_cargo: false
-```
-### [9]
 
 ```
 cargo_request: 1
@@ -223,7 +153,43 @@ only_unload: true
 load_and_unload: false
 unload_cargo: true
 ```
-### [10]
+### [6]
+
+```
+cargo_request: 1
+load_in_minute: 1
+load_out_minute: 0
+has_priority_cargo: 0
+has_free_slots: 1
+has_free_capacity: 1
+has_cargo: 1
+load_cargo: true
+load_priority_cargo: false
+becomes_priority: false
+expired_time: false
+only_unload: false
+load_and_unload: true
+unload_cargo: true
+```
+### [7]
+
+```
+cargo_request: 1
+load_in_minute: 0
+load_out_minute: 0
+has_priority_cargo: 0
+has_free_slots: 1
+has_free_capacity: 1
+has_cargo: 1
+load_cargo: false
+load_priority_cargo: false
+becomes_priority: true
+expired_time: true
+only_unload: false
+load_and_unload: true
+unload_cargo: true
+```
+### [8]
 
 ```
 cargo_request: 0
@@ -231,6 +197,42 @@ load_in_minute: 0
 load_out_minute: 0
 has_priority_cargo: 0
 has_free_slots: 1
+has_free_capacity: 1
+has_cargo: 1
+load_cargo: false
+load_priority_cargo: false
+becomes_priority: false
+expired_time: false
+only_unload: false
+load_and_unload: true
+unload_cargo: true
+```
+### [9]
+
+```
+cargo_request: 0
+load_in_minute: 0
+load_out_minute: 0
+has_priority_cargo: 1
+has_free_slots: 1
+has_free_capacity: 1
+has_cargo: 1
+load_cargo: false
+load_priority_cargo: false
+becomes_priority: false
+expired_time: false
+only_unload: true
+load_and_unload: false
+unload_cargo: true
+```
+### [10]
+
+```
+cargo_request: 0
+load_in_minute: 0
+load_out_minute: 0
+has_priority_cargo: 0
+has_free_slots: 0
 has_free_capacity: 1
 has_cargo: 1
 load_cargo: false
@@ -248,7 +250,7 @@ cargo_request: 0
 load_in_minute: 0
 load_out_minute: 0
 has_priority_cargo: 0
-has_free_slots: 1
+has_free_slots: 0
 has_free_capacity: 0
 has_cargo: 1
 load_cargo: false
@@ -262,17 +264,17 @@ unload_cargo: true
 ### [12]
 
 ```
-cargo_request: 1
+cargo_request: 0
 load_in_minute: 0
 load_out_minute: 0
 has_priority_cargo: 1
-has_free_slots: 1
-has_free_capacity: 1
+has_free_slots: 0
+has_free_capacity: 0
 has_cargo: 1
 load_cargo: false
 load_priority_cargo: false
-becomes_priority: true
-expired_time: true
+becomes_priority: false
+expired_time: false
 only_unload: true
 load_and_unload: false
 unload_cargo: true
@@ -280,7 +282,7 @@ unload_cargo: true
 ### [13]
 
 ```
-cargo_request: 1
+cargo_request: 0
 load_in_minute: 0
 load_out_minute: 0
 has_priority_cargo: 1
@@ -289,27 +291,9 @@ has_free_capacity: 1
 has_cargo: 1
 load_cargo: false
 load_priority_cargo: false
-becomes_priority: true
-expired_time: true
+becomes_priority: false
+expired_time: false
 only_unload: true
 load_and_unload: false
 unload_cargo: true
-```
-### [14]
-
-```
-cargo_request: 1
-load_in_minute: 0
-load_out_minute: 0
-has_priority_cargo: 0
-has_free_slots: 0
-has_free_capacity: 1
-has_cargo: 0
-load_cargo: false
-load_priority_cargo: false
-becomes_priority: true
-expired_time: true
-only_unload: false
-load_and_unload: true
-unload_cargo: false
 ```

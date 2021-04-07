@@ -1,15 +1,15 @@
-﻿Name,Description,[1],[2],[3],[4],[5],[6],[7],[8],[9],[10],[11],[12],[13],[14]
-cargo_request,Vznik požiadavky na presun materiálu z jedného miesta do druhého,1,0,1,0,1,0,1,0,1,0,0,1,1,1
-load_in_minute,Vozík si materiál vyzdvihne do 1 minúty od vzniku požiadavky,1,0,0,0,0,0,0,0,0,0,0,0,0,0
-load_out_minute,Vozík si materiál vyzdvihne po 1 minúte od vzniku požiadavky,0,0,1,0,0,0,0,0,1,0,0,0,0,0
-has_priority_cargo,Vozík má naložený prioritný materiál,0,0,0,0,0,0,0,0,0,0,0,1,1,0
-has_free_slots,Vozík ma voľný dostatočný počet slotov vozíka,1,1,1,1,1,0,0,0,1,1,1,1,0,0
-has_free_capacity,Vozík má voľnú dostatočnú kapacitu,1,1,1,0,0,0,0,1,1,1,0,1,1,1
-has_cargo,Vozík má naložený materiál,0,0,0,0,0,0,0,0,1,1,1,1,1,0
-load_cargo,Vozík vyzdvihne materiál,true,false,false,false,false,false,false,false,false,false,false,false,false,false
-load_priority_cargo,Vozík vyzdvihne prioritný materiál,false,false,true,false,false,false,false,false,true,false,false,false,false,false
-becomes_priority,Materiál sa stáva prioritným,false,false,true,false,true,false,true,false,true,false,false,true,true,true
-expired_time,Vozík nestihol vyzdvihnúť náklad v požadovanom limite,false,false,false,false,true,false,true,false,false,false,false,true,true,true
-only_unload,Vozík je v režíme iba_vykládka,false,false,true,false,false,false,false,false,true,false,false,true,true,false
-load_and_unload,Vozík je v režíme nákladka_výkladka,true,true,false,true,true,true,true,true,false,true,true,false,false,true
-unload_cargo,Vozík vykladá už vyzdvihnuté materiály,true,false,true,false,false,false,false,false,true,true,true,true,true,false
+﻿Name,Description,[1],[2],[3],[4],[5],[6],[7],[8],[9],[10],[11],[12],[13]
+cargo_request,Vznik požiadavky na presun materiálu z jedného miesta do druhého,1,0,1,1,1,1,1,0,0,0,0,0,0
+load_in_minute,Vozík si materiál vyzdvihne do 1 minúty od vzniku požiadavky,1,0,0,0,0,1,0,0,0,0,0,0,0
+load_out_minute,Vozík si materiál vyzdvihne po 1 minúte od vzniku požiadavky,0,0,1,0,1,0,0,0,0,0,0,0,0
+has_priority_cargo,Vozík má naložený prioritný materiál,0,0,0,0,0,0,0,0,1,0,0,1,1
+has_free_slots,Vozík ma voľný dostatočný počet slotov vozíka,1,1,1,1,1,1,1,1,1,0,0,0,0
+has_free_capacity,Vozík má voľnú dostatočnú kapacitu,1,1,1,1,1,1,1,1,1,1,0,0,1
+has_cargo,Vozík má naložený materiál,0,0,0,0,1,1,1,1,1,1,1,1,1
+load_cargo,Vozík vyzdvihne materiál,true,false,false,false,false,true,false,false,false,false,false,false,false
+load_priority_cargo,Vozík vyzdvihne prioritný materiál,false,false,true,false,true,false,false,false,false,false,false,false,false
+becomes_priority,Materiál sa stáva prioritným,false,false,true,true,true,false,true,false,false,false,false,false,false
+expired_time,Vozík nestihol vyzdvihnúť náklad v požadovanom limite,false,false,false,true,false,false,true,false,false,false,false,false,false
+only_unload,Vozík je v režíme iba_vykládka,false,false,true,false,true,false,false,false,true,false,false,true,true
+load_and_unload,Vozík je v režíme nákladka_výkladka,true,true,false,true,false,true,true,true,false,true,true,false,false
+unload_cargo,Vozík vykladá už vyzdvihnuté materiály,true,false,true,false,true,true,true,true,true,true,true,true,true
